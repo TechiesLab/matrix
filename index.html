@@ -153,7 +153,24 @@
 
             <p>On va maintenant faire apparaître les messages seulement lorsqu'on clique sur notre canvas. Te rappelles-tu de la fonction à utiliser pour repérer le clic de la souris?</p>
 
-            <p>Eh oui, c'est la fonction <code class="language-js">mouseClicked()</code>. On va la coder après nos fonctions <code class="language-js">setup()</code> et <code class="language-js">draw()</code>.</p>
+            <p>Eh oui, c'est la fonction <code class="language-js">mouseClicked()</code>. On va la coder après nos fonctions <code class="language-js">setup()</code> et <code class="language-js">draw()</code> comme ceci:</p>
+            <pre>
+            <code class="language-js">
+              function setup() {
+                createCanvas(600, 200);
+              }
+
+              function draw() {
+                background("red");
+                fill("blue");
+                rect(300, 0, 400);
+              }
+
+              function mouseClicked() {
+                // TON CODE POUR FAIRE APPARAÎTRE LES DEUX MESSAGES
+              }
+            </code>
+            </pre>
 
 
 
