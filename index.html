@@ -172,6 +172,14 @@
             </code>
             </pre>
 
+            <p>Teste ton code: lance ton application et clique sur le canvas. On dirait que le texte apparaît mais disparaît aussitôt! C'est que la fonction <code class="language-js">draw()</code> est lancée immédiatement après et recouvre nos messages avec les couleurs.</p>
+
+            <p>Pour être sûr que ton message reste sur le canvas, ajouter la ligne suivante <em>à la toute fin de ta fonction</em> <code class="language-js">mouseClicked()</code>:</p>
+
+            <code class="language-js">noLoop()</code>
+
+            <p>Cela empêche la fonction <code class="language-js">draw()</code> d'être déclanchée à nouveau.</p>
+
 
 
           </div>
