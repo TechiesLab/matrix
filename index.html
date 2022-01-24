@@ -48,25 +48,15 @@
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
             <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              Etape 1 - Crée un compte sur P5.js
+              Etape 1 - Connecte-toi à ton compte P5.js
             </button>
           </h2>
         </div>
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
-            <p>P5.js est une librairie JavaScript très chouette pour créer des animations et des jeux sur le web. P5.js a un éditeur de texte en ligne qui te permet d'écrire ton code, de le tester, de le sauvegarder et de le partager d'un même endroit. Super pratique!</p>
+            <p>Si tu n'as pas de compte p5.js, commence par la fiche <a target="_blank" href="https://techieslab.github.io/year-prediction_instructions/">Prédictions de l'année</a>.</p>
 
-            <p>Pour créer ton compte:</p>
-            <ol>
-              <li><p>Clique sur ce lien <a target="_blank" href="https://editor.p5js.org/">https://editor.p5js.org/</a></p></li>
-              <li>Clique sur le lien <strong>Sign up</strong> en haut à droite de la page. Tu auras besoin d'une adresse email.</li>
-              <li>Assure-toi de te noter quelque part ton mot de passe si tu n'utilises pas de gestionnaire de mots de passe!</li>
-            </ol>
-
-            <p>Une fois ton compte créé, tu devrais arriver sur une page qui ressemble à ceci:</p>
-            <img class="flexgif img-shadow mb-3" src="images/step1.png" alt="">
-            <p>Pour ceux qui ont fait du <a href="https://scratch.mit.edu/">Scratch</a>, l’interface p5.js devrait sembler familière. Le code est à gauche et le résultat est à droite, dans l'espace <em>Preview</em>.</p>
-            <p>La grande différence, c'est que maintenant, tu vas écrire ton code à la main. Enfin le taper. Il n'y a plus de blocs prêts à être utilisés.</p>
+            <p>Si tu as déjà un compte, tu peux te loguer en cliquant sur ce lien: <a target="_blank" href="https://editor.p5js.org/">https://editor.p5js.org/</a></p>
           </div>
         </div>
       </div>
@@ -74,37 +64,46 @@
         <div class="card-header" id="headingTwo">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Etape 2 - Explore ton environnement
+              Etape 2 - Un côté <span style="color: red;">rouge</span> et un côté bleu
             </button>
           </h2>
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Par défaut, l'éditeur P5.js a nommé mon projet "Nostalgic budget". C'est marrant, mais pas très descriptif de mon projet. Je vais le renommer "En 2022, je serai..." en appuyant sur le petit crayon 🖉: </p>
-            <img class="img-shadow mb-3" src="images/rename_project.png" alt="">
-            <img class="img-shadow mb-3" src="images/renamed_project.png" alt="">
-            <p>Toi aussi, renomme ton projet.</p>
-            <p>Ensuite, tu as peut-être noté qu'au-dessus du code, il y a la mention <strong>sketch.js</strong></p>
-            <img class="img-shadow mb-3" src="images/sketch.png" alt="">
-            <p>À ton avis, qu'est-ce que ça fait là?</p>
+            <p>Avant toute chose, renomme ton projet en appuyant sur le petit crayon 🖉. Moi j'ai choisi le nom "Matrix".</p>
+
+            <p>Maintenant, tente d'élargir ton canevas pour qu'il ait la forme d'un rectangle.</p>
 
             <p>
               <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint1" role="button" aria-expanded="false" aria-controls="collapseHint1">Indice</a>
             </p>
             <div class="collapse mb-3" id="collapseHint1">
               <div class="card card-body">
-                <p><strong>sketch.js</strong>, c'est le nom du fichier de code que tu vas coder. L'extension <strong>.js</strong> signifie que le langage de programmation utilisé est le JavaScript. Si le fichier s'était appelé <strong>sketch.py</strong>, le langage de programmation aurait été... Python! </p>
+                <p>L'instruction <code class="language-js">createCanvas(400, 400);</code> crée un carré de 400 pixels sur 400 pixels... À mon avis, tu dois changer un des chiffres.</p>
               </div>
             </div>
 
+            <p>Un peu de couleur! Comment faire pour changer la couleur de tout ton canevas (de l'arrière-plan)? Tu peux mettre tout l'arrière plan en rouge, par exemple.</p>
 
-            <p>À gauche de <strong>sketch.js</strong>, tu as un petite flèche <strong>></strong>. Clique sur la flèche. Ton projet a plus d'un fichier!</p>
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint2" role="button" aria-expanded="false" aria-controls="collapseHint1">Indice</a>
+            </p>
+            <div class="collapse mb-3" id="collapseHint2">
+              <div class="card card-body">
+                <p>Un petit blanc? Pour retrouver comment changer la couleur de l'arrière-plan, tu peux consulter <a target="_blank" href="https://techieslab.github.io/year-prediction_instructions/">l'étape 4 du défi des Prédictions</a>.</p>
+              </div>
+            </div>
+            <p>Et finalement, les deux couleurs! Pour que les deux couleurs soient visibles sur ton canvas, tu peux ajouter un rectangle de couleur <span style="color:blue">bleue</span> sur la partie droite (ou gauche). Tu auras besoin de ces deux fonctions:</p>
+            <ul>
+              <li><code>fill()</code></li>
+              <li><code>rect()</code></li>
+            </ul>
 
-            <img class="img-shadow mb-3" src="images/step2.png" alt="">
+            <img src="images/red-blue.png" width="300px">
 
-            <p>Pour l'instant, nous n'allons pas toucher les fichiers <strong>index.html</strong> et <strong>style.css</strong>, mais sache qu'ils existent.</p>
 
-            <p>Le dernier élément à noter au bas est la <strong>Console</strong>. Elle est très utile pour corriger notre code. Nous en parlerons plus tard.</p>
+
+
           </div>
         </div>
       </div>
@@ -223,12 +222,6 @@ text('word', 10, 30);
 
             <p>On va les copier et les coller dans la fonction <code class="language-js">draw()</code> de notre code. Tadam, le mot <em>word</em> apparaît sur notre canevas.
 </p>
-
-            <img class="img-shadow mb-3" src="images/step5c.png" alt="">
-            <div class="alert alert-primary" role="alert">
-              🤔 À ton avis, pourquoi ce code ne marche-t-il pas?
-              <img class="flexgif img-shadow mb-3" src="images/step5d.png" alt="">
-            </div>
             <p>
               <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint1" role="button" aria-expanded="false" aria-controls="collapseHint1">Indice</a>
             </p>
