@@ -174,7 +174,7 @@
 
             <p>Teste ton code: lance ton application et clique sur le canvas. On dirait que le texte apparaît mais disparaît aussitôt! C'est que la fonction <code class="language-js">draw()</code> est lancée immédiatement après et recouvre nos messages avec les couleurs.</p>
 
-            <p>Pour être sûr que ton message reste sur le canvas, ajouter la ligne suivante <em>à la toute fin de ta fonction</em> <code class="language-js">mouseClicked()</code>:</p>
+            <p>Pour être sûr que ton message reste sur le canvas, ajoute la ligne suivante <em>à la toute fin de ta fonction</em> <code class="language-js">mouseClicked()</code>:</p>
 
             <code class="language-js">noLoop()</code>
 
@@ -199,6 +199,75 @@
             <code class="language-js">console.log(mouseX);</code>
 
             <p>Qu'est-ce que la variable <code class="language-js">mouseX</code> stocke? Un mot, une lettre, un chiffre? Et qu'est ce que ça représente?</p>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer5a" role="button" aria-expanded="false" aria-controls="collapseAnswer5a">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="collapseAnswer5a">
+              <div class="card card-body">
+                C'est un chiffre qui représente la position sur l'axe des X de ta souris lorsque tu as cliqué sur le canvas.
+              </div>
+            </div>
+
+            <p>Grâce à cette variable, on va pouvoir déterminer si on a cliqué à droite ou à gauche. <em>Si</em> on a cliqué à gauche, c'est le message de la pilule rouge qui va s'afficher, <em>sinon</em> ce sera celui de la pilule bleue!</p>
+
+            <p>Comment peut-on coder un <em>si</em>, <em>sinon</em> en Javascript?</p>
+
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint6a" role="button" aria-expanded="false" aria-controls="collapseHint6a">Indice</a>
+            </p>
+            <div class="collapse mb-3" id="collapseHint6a">
+              <div class="card card-body">
+                <p>En Javascript, on utilise une condition <em>if... else</em>. La syntaxe est la suivante:</p>
+
+                <pre>
+                  <code class="language-js">
+                  if (CONDITION) {
+                    // ton code pour le côté gauche
+                  } else {
+                    // ton code pour le côté droit
+                  }
+                  </code>
+                </pre>
+
+                <p>Bien sûr, il faut remplacer le mot <code class="language-js">CONDITION</code> par la condition qui te permet de déterminer si tu as cliqué à gauche. Quelque-chose comme <code class="language-js">if (mouseX < ???)</code>. À toi de trouver la valeur des <code class="language-js">???</code>.</p>
+              </div>
+            </div>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer6b" role="button" aria-expanded="false" aria-controls="collapseAnswer6b">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="collapseAnswer6b">
+              <div class="card card-body">
+                <p>Voici la structure générale de ton code:</p>
+                <pre>
+                  <code class="language-js">
+                  function setup() {
+                    // ton code
+                  }
+
+                  function draw() {
+                    // ton code
+                  }
+
+                  function mouseClicked() {
+                    // change la couleur de ton texte (moi j'ai choisi blanc)
+                    fill("white");
+                    if (mouseX < 300) {
+                      text("Cette année tu vas voyager sur Mars", 10, 200);
+                      // le reste de ton code (si tu as plusieurs lignes de texte, par exemple)
+                    } else {
+                      text("Cette année tu vas rester sur Mars", 310, 200);
+                      // le reste de ton code
+                    }
+                    // Très important d'ajouter le noLoop() à la fin!
+                    noLoop();
+                  }
+                  </code>
+                </pre>
+
+              </div>
+            </div>
           </div>
         </div>
       </div> <!-- end .card -->
@@ -213,6 +282,12 @@
         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
           <div class="card-body">
             <p>Voici quelques idées pour améliorer ton projet:</p>
+
+            <ol>
+              <li>ajuste la taille de ton texte en utilisant la fonction <a href="https://p5js.org/reference/#/p5/textSize" target="_blank"><code class="language-js">textSize()</code></a></li>
+              <li>choisis une chouette police avec les Google fonts (tu peux t'inspirer de l'étape 12 du <a href="https://techieslab.github.io/year-prediction_instructions/" target="_blank">défi des prédictions</a></li>
+              <li>code des messages aléatoires (DIFFICILE)</li>
+            </ol>
             </div>
           </div>
         </div>
